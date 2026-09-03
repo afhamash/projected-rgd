@@ -193,7 +193,8 @@ def draw_exit(axis, spectra, alpha, beta, dev_star):
     axis.annotate(r"$\lambda_{\min}(S_\star) - \alpha$", (0.6, dev_star),
                   textcoords="offset points", xytext=(0, 5), fontsize=8.5,
                   color=INK_SECONDARY)
-    axis.annotate(r"$\alpha$", (t[-1] + 0.35, 0.0), fontsize=11, va="center")
+    axis.annotate(r"$\lambda_{\min} = \alpha$", (t[-1] + 0.85, 0.0), fontsize=9,
+                  ha="right", va="bottom")
     axis.axhspan(-1.0, 0.0, color=VIOLATION_RED, alpha=0.10, lw=0, zorder=0)
     axis.plot(t, dev, "o", ls="--", color=LIGHTBLUE, ms=5.0, lw=1.3, zorder=3)
     axis.plot(t[violating], dev[violating], "o", color=VIOLATION_RED, ms=8.0,
