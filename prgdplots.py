@@ -175,7 +175,7 @@ def draw_convergence(axis, runs):
     axis.set_ylim(HEADLINE_FLOOR * 0.5, 3.0)
     axis.set_xlabel("iteration $t$")
     axis.set_ylabel(r"$[f(S_t) - f(S_\star)]\,/\,[f(S_0) - f(S_\star)]$", fontsize=9)
-    axis.legend(loc="lower left", fontsize=8.5, framealpha=0.9)
+    axis.legend(loc="center right", fontsize=8.5, framealpha=0.9)
     axis.set_title(r"(a) unit against small step   ($d = 2$, $n = 5$, $\kappa = 10^2$)",
                    fontsize=10)
     return int(tu[keep_u].max()), int(ts[keep_s].max())
@@ -193,7 +193,7 @@ def draw_exit(axis, spectra, alpha, beta, dev_star):
     axis.annotate(r"$\lambda_{\min}(S_\star) - \alpha$", (0.6, dev_star),
                   textcoords="offset points", xytext=(0, 5), fontsize=8.5,
                   color=INK_SECONDARY)
-    axis.annotate(r"$\lambda_{\min} = \alpha$", (t[-1] + 0.85, 0.0), fontsize=9,
+    axis.annotate(r"$\lambda_{\min}(S_t) = \alpha$", (t[-1] + 0.85, 0.0), fontsize=9,
                   ha="right", va="bottom")
     axis.axhspan(-1.0, 0.0, color=VIOLATION_RED, alpha=0.10, lw=0, zorder=0)
     axis.plot(t, dev, "o", ls="--", color=LIGHTBLUE, ms=5.0, lw=1.3, zorder=3)
